@@ -1,11 +1,4 @@
-"""
-    Created by Guido van Rossum, released in 1991
-    Main usages: Web Development, Software Development, Mathematics, System Scripting
-    Works on different platforms (Windows, Mac, Linux, etc)
-    Runs on an interpreter system
-    Paradigms: Procedural, Object-Oriented & Functional
-    Recent Major Versions: 3
-"""
+# Paradigms: Procedural, Object-Oriented & Functional
 
 import sys # System-spefic Parameters and Functions Module
 import random # Random Module
