@@ -5,9 +5,6 @@
     Runs on an interpreter system
     Paradigms: Procedural, Object-Oriented & Functional
     Recent Major Versions: 3
-
-    Practicing GitHub
-    Adding another line
 """
 
 import sys # System-spefic Parameters and Functions Module
