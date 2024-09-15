@@ -1,0 +1,25 @@
+# History/Paradigm/Architecture/Purpose
+# Basics
+# Data Types
+# User Input
+# Data Structures (List, Tuple, Dict, Set)
+# Conditional
+# Loops
+# Functions & Lambdas
+# Classes/OOP
+# Files/Directories
+# GUI
+# Exception Handling
+# Testing/Debugging
+# Documents/Diagrams
+# Concurrency
+# Web Applications
+# Databases
+# Design Patterns/Principles
+# Frameworks & Libraries
+# Best Practices
+# Enterprise Application Architecture & Principles
+# Microservices (Load Balancing, Service Discovery, Asynch/Sync Communication, REST, Event-Driven Design, Pub-Sub Model, Data Model, Observability & More)
+# API Development
+# Containerization/Virtualization
+# Authentication/Authorization
