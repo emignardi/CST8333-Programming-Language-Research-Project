@@ -1,10 +1,36 @@
 # Paradigms: Procedural, Object-Oriented & Functional
 
+
+
+
+# Modules
 import sys # System-spefic Parameters and Functions Module
 import random # Random Module
 print(sys.version) # Python Version
+
+
+
+
+# Command Line Commands & Read Eval Print Loop (REPL)
+# python
+# exit()
+
+
+
+
+# Console Output
 print("Hello World") # Console Output
 
+
+
+
+# User Input
+userInput = input("What is your favourite instrument?")
+
+
+
+
+# Variables & Data Types
 name = "Eric" # String
 lastName = str(" Mignardi ") # String Constructor
 slicedName = name[2:4] # String Slice
@@ -39,6 +65,8 @@ print(type(number))
 
 
 
+
+# Data Structures
 friends = ["Tadoe", "Bubs", "Leon"] # List (ordered, mutable, duplicates)
 tadoe = friends[0]
 friends.append("Food")
@@ -60,22 +88,15 @@ food = {"Burger", "Pizza", "Candy"} # Set (unordered, immutable but can add/remo
 parents = ("Norma", "John") # Tuple (ordered, immutable, duplicates)
 john = parents[1]
 friends.extend(parents)
-
-
-
-# Python Command Line Commands & Read Eval Print Loop (REPL)
-# python
-# exit()
-
-
-
 fruits = ["banana", "strawberry", "peach"] # Unpacking Collection
 a, b, c = fruits
 print(a + b + c)
 
 
 
-globalVar = "Eric" # Global & Local Scope
+
+# Scope (Global & Local)
+globalVar = "Eric"
 def testScope():
     globalVar = "Mignardi"
     print(globalVar)
@@ -91,6 +112,8 @@ print(globalVar)
 
 
 
+
+# Operators
 l = 1 + 2 # Arithmetic Operators
 m = 4 * 2
 n = 4 / 2
@@ -103,7 +126,9 @@ p = 4 // 4
 
 
 
-if l > m: # Conditionals
+
+# Conditionals
+if l > m:
     print("L is greater")
 elif l == m:
     print("L is equal")
@@ -114,7 +139,9 @@ print("L is greater") if l > m else print("L is not greater")
 
 
 
-i = 1 # Loops
+
+# Loops
+i = 1
 while i < 6:
     print(i)
     i += 1
@@ -127,23 +154,105 @@ for number99 in range(6):
 
 
 
-def my_function(myName): # Functions
-    print("this is a function" + myName)
 
+# Functions
+def my_function(myName):
+    print("this is a function" + myName)
 my_function("Eric")
 
 
 
+
+# Lambdas
+squared = lambda num : num * num # Lambda
+print(squared(2))
+
+addition = lambda a, b : a + b # Lambda (Two Parameters)
+print(addition(100, 100))
+
+# addTwo = lambda num : num + 2
+def addTwo(num): return num + 2 # Lambda Formatted As Function
+print(addTwo(12))
+
+
+
+
+# Higher Order Function (Takes one or more functions as arguments or returns a function as result)
+def funcBuilder(x):
+    return lambda num : num + x
+addTen = funcBuilder(10)
+addTwenty = funcBuilder(20)
+print(addTen(86))
+print(addTwenty(76))
+
+
+
+
+# Classes & Objects
 class User: # Class
-    def __init__(self, name, age):
+    def __init__(self, name, age): # Constructor
         self.name = name
         self.age = age
-    def __str__(self):
+    def __str__(self): # toString
         return f"{self.name} is {self.age} years old."
     def myFunction(self):
         print("Hello " + self.name)
 
 user = User("Eric", 28) #Object
 user.myFunction()
-
 print(user)
+
+class Child(User): # Inheritance
+    def myFunction(self): # Method Overriding & Polymorphism
+        print("Hello from Child " + self.name)
+child = Child("Tadoe", 10)
+class Adult(User):
+    def myFunction(self):
+        print("Hello from Adult " + self.name)
+adult = Adult("John", 64)
+child.myFunction()
+adult.myFunction()
+
+
+
+
+# Closures
+def parent_function(person, coins): # Closures
+    # coins = 3
+    def play_game():
+        nonlocal coins
+        coins -= 1
+        if coins > 1:
+            print(person + " has " + str(coins) + " coins left")
+        elif coins == 1:
+            print(person + " has " + str(coins) + " coin left")
+        else:
+            print(person + " has " + str(coins) + " is out of coins")
+    return play_game
+tommy = parent_function("Tommy", 3)
+jenny = parent_function("Jenny", 3)
+tommy()
+tommy()
+jenny()
+
+
+
+
+# Exceptions
+notHere = 2
+
+class CustomError(Exception): # Custom Exception
+    pass
+
+try: # Try-Except-Finally Block
+    raise CustomError("This is a custom error") # Raising Error
+    # raise Exception("I'm a custom exception")
+    # print(notHere / 0)
+    # if not type(notHere) is str:
+    #     raise TypeError("only strings are allowed")
+except ZeroDivisionError as e:
+    print(e)
+else:
+    print("There is no error")
+finally:
+    print("I'm going to print with or without error")
