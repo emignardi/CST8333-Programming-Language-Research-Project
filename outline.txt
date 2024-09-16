@@ -7,9 +7,9 @@ Loops
 Functions
 Lambdas
 Classes/OOP
-# Files/Directories
+Files/Directories
 # GUI
-# Exception Handling
+Exception Handling
 # Testing/Debugging
 # Documents/Diagrams
 # Concurrency
