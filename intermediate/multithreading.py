@@ -1,6 +1,12 @@
+# Concurrency (Concept) : How a program or algorithm is structured, not how it is executed
+#                         Several sub parts can be executed out of order without affecting outcome (no specific order, identical final result)
+
 # Threading & Time Modules
 import threading
 import time
+
+# Concurrent Module - ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor
 
 # Target Functions
 def call_api(path):
@@ -35,3 +41,26 @@ thread1.join()
 thread2.join()
 thread3.join()
 print("All threads are complete.")
+
+
+
+def worker(number):
+    print(f"Calculating result for {number}")
+    time.sleep(2)
+    return number ** 2
+
+# Thread Pools
+pool = ThreadPoolExecutor(5)
+result1 = pool.submit(worker, 7)
+result2 = pool.submit(worker, 9)
+result3 = pool.submit(worker, 5)
+result4 = pool.submit(worker, 5)
+result5 = pool.submit(worker, 8)
+
+# time.sleep(5)
+if result3.done():
+    print(result3.result())
+
+# pool.shutdown() Prevents any further submissions
+
+print("End of file")
