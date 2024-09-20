@@ -1,34 +1,19 @@
 # Paradigms: Procedural, Object-Oriented & Functional
 
-
-
-
 # Modules
 import sys # System-spefic Parameters and Functions Module
 import random # Random Module
 print(sys.version) # Python Version
 
-
-
-
 # Command Line Commands & Read Eval Print Loop (REPL)
 # python
 # exit()
 
-
-
-
 # Console Output
 print("Hello World") # Console Output
 
-
-
-
 # User Input
 userInput = input("What is your favourite instrument?")
-
-
-
 
 # Variables & Data Types
 name = "Eric" # String
@@ -63,8 +48,10 @@ boolean = bool("Hello") # True
 number = int(10.5) # Casting
 print(type(number))
 
-
-
+# Access Modifiers - Access To Data Inside/Outside Of Class
+varPublic = 65 # Accessible Both Inside/Outside of Class
+_varProtected = 65 # Accessible Inside Class And Its Subclass
+__varPrivate = 65 # Accessible Only Inside Class
 
 # Data Structures
 friends = ["Tadoe", "Bubs", "Leon"] # List (ordered, mutable, duplicates)
@@ -92,9 +79,6 @@ fruits = ["banana", "strawberry", "peach"] # Unpacking Collection
 a, b, c = fruits
 print(a + b + c)
 
-
-
-
 # Scope (Global & Local)
 globalVar = "Eric"
 def testScope():
@@ -110,9 +94,6 @@ def testScope2():
 testScope2()
 print(globalVar)
 
-
-
-
 # Operators
 l = 1 + 2 # Arithmetic Operators
 m = 4 * 2
@@ -124,9 +105,6 @@ p = 4 // 4
 # Membership Operators (in, not in)
 # Bitwise Operators (&, |, ^, ~)
 
-
-
-
 # Conditionals
 if l > m:
     print("L is greater")
@@ -136,9 +114,6 @@ else:
     print("L is less than")
 
 print("L is greater") if l > m else print("L is not greater")
-
-
-
 
 # Loops
 i = 1
@@ -152,16 +127,10 @@ for fruit in fruits:
 for number99 in range(6):
     print(number99)
 
-
-
-
 # Functions
 def my_function(myName):
     print("this is a function" + myName)
 my_function("Eric")
-
-
-
 
 # Lambdas
 squared = lambda num : num * num # Lambda
@@ -174,9 +143,6 @@ print(addition(100, 100))
 def addTwo(num): return num + 2 # Lambda Formatted As Function
 print(addTwo(12))
 
-
-
-
 # Higher Order Function (Takes one or more functions as arguments or returns a function as result)
 def funcBuilder(x):
     return lambda num : num + x
@@ -184,9 +150,6 @@ addTen = funcBuilder(10)
 addTwenty = funcBuilder(20)
 print(addTen(86))
 print(addTwenty(76))
-
-
-
 
 # Classes & Objects
 class User: # Class
@@ -213,9 +176,6 @@ adult = Adult("John", 64)
 child.myFunction()
 adult.myFunction()
 
-
-
-
 # Closures
 def parent_function(person, coins): # Closures
     # coins = 3
@@ -234,9 +194,6 @@ jenny = parent_function("Jenny", 3)
 tommy()
 tommy()
 jenny()
-
-
-
 
 # Exceptions
 notHere = 2
