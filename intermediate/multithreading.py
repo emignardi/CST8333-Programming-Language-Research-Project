@@ -4,6 +4,7 @@
 # Threading & Time Modules
 import threading
 import time
+import random
 
 # Concurrent Module - ThreadPoolExecutor
 from concurrent.futures import ThreadPoolExecutor
@@ -42,14 +43,12 @@ thread2.join()
 thread3.join()
 print("All threads are complete.")
 
-
-
+# Thread Pools
 def worker(number):
     print(f"Calculating result for {number}")
     time.sleep(2)
     return number ** 2
 
-# Thread Pools
 pool = ThreadPoolExecutor(5)
 result1 = pool.submit(worker, 7)
 result2 = pool.submit(worker, 9)
@@ -64,3 +63,26 @@ if result3.done():
 # pool.shutdown() Prevents any further submissions
 
 print("End of file")
+
+# Locks & Synchronization
+class ThreadCounter:
+
+    def __init__(self):
+        self.counter = 0
+        self.lock = threading.Lock()
+
+    def count(self, thread_no):
+        while True:
+            self.lock.acquire()
+            self.counter += 1
+            print(f"{thread_no}: Just increased counter to {self.counter}")
+            time.sleep(1)
+            print(f"{thread_no}: Done some work, now value is {self.counter}")
+            self.lock.release()
+            time.sleep(random.randint(1,3))
+
+tc = ThreadCounter()
+
+for i in range(30):
+    t = threading.Thread(target=tc.count, args=(i,))
+    t.start()
