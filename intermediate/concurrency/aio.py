@@ -4,12 +4,14 @@ import time
 # Coroutine - Returns Coroutine Object
 async def brewCoffee():
     print("Start brewCoffee")
+    # time.sleep(3)
     await asyncio.sleep(3)
     print("End brewCoffee")
     return "Coffee ready"
 
 async def toastBagel():
     print("Start toastBagel")
+    # time.sleep(2)
     await asyncio.sleep(2)
     print("End toastBagel")
     return "Bagel toasted"
