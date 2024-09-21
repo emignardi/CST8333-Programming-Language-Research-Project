@@ -12,14 +12,14 @@ Files/Directories
 Exception Handling
 # Testing/Debugging
 # Documents/Diagrams
-# Concurrency
+Multithreading, Multiprocessing & asyncio
 # Web Applications
 # Databases
 # Design Patterns/Principles
 # Frameworks & Libraries
 # Best Practices
 # Enterprise Application Architecture & Principles
-# Microservices (Load Balancing, Service Discovery, Asynch/Sync Communication, REST, Event-Driven Design, Pub-Sub Model, Data Model, Observability & More)
+# Microservices (Load Balancing, Service Discovery, Async/Sync Communication, REST, Event-Driven Design, Pub-Sub Model, Data Model, Observability & More)
 # API Development
 # Containerization/Virtualization
 # Authentication/Authorization
