@@ -23,8 +23,12 @@ cursor.execute("INSERT INTO Cats (id, name, age) VALUES (null, 'Tadoe', 10), (nu
 connection.commit()
 
 # Read
+cursor.execute("SELECT * FROM Cats")
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
 cursor.execute("SELECT * FROM Cats WHERE id = 20")
-print(cursor.fetchall())
+print(cursor.fetchone())
 
 # Update
 cursor.execute("UPDATE Cats SET name = 'Tonto' WHERE id = 20;")
