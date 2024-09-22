@@ -11,14 +11,13 @@ Beginner:
 - Exception Handling
 ---
 Intermediate:
+- Multithreading, Multiprocessing & asyncio
+- Databases
 # GUI
 # Testing/Debugging
-- Multithreading, Multiprocessing & asyncio
 # Web Applications
-- Databases
 # Design Patterns/Principles
 # Frameworks & Libraries
-# Best Practices
 ---
 Advanced:
 # Enterprise Application Architecture & Principles
@@ -28,4 +27,5 @@ Advanced:
 # Authentication/Authorization
 ---
 Extra:
-# Documentation & UML Diagrams
+- Documentation & UML Diagrams
+- Best Practices
