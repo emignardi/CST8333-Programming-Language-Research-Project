@@ -1,4 +1,4 @@
-Beginner:
+Month 1:
 - Basics
 - Data Types
 - User Input
@@ -10,19 +10,18 @@ Beginner:
 - Files/Directories
 - Exception Handling
 
-Intermediate:
+Month 2:
 - Multithreading, Multiprocessing & asyncio
 - Databases
+- SQLAlchemy (Object Relational Mapping)
 # GUI
 # Testing/Debugging
 # Web Applications
 # Design Patterns/Principles
 # Frameworks & Libraries
 
-Advanced:
-# SQLAlchemy (Object Relational Mapping)
+Month 3:
 # Enterprise Application Architecture & Principles
 # Microservices (Load Balancing, Service Discovery, Async/Sync Communication, REST, Event-Driven Design, Pub-Sub Model, Data Model, Observability & More)
-# API Development
 # Containerization/Virtualization
 # Authentication/Authorization

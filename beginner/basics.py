@@ -213,3 +213,10 @@ else:
     print("There is no error")
 finally:
     print("I'm going to print with or without error")
+
+# Comprehensions
+doubles = []
+for x in range(1, 10):
+    doubles.append(x * 2)
+
+doubles_comp = [x * 2 for x in range(1, 10)]
