@@ -9,7 +9,7 @@ Beginner:
 - Classes/OOP
 - Files/Directories
 - Exception Handling
----
+
 Intermediate:
 - Multithreading, Multiprocessing & asyncio
 - Databases
@@ -18,14 +18,11 @@ Intermediate:
 # Web Applications
 # Design Patterns/Principles
 # Frameworks & Libraries
----
+
 Advanced:
+# SQLAlchemy (Object Relational Mapping)
 # Enterprise Application Architecture & Principles
 # Microservices (Load Balancing, Service Discovery, Async/Sync Communication, REST, Event-Driven Design, Pub-Sub Model, Data Model, Observability & More)
 # API Development
 # Containerization/Virtualization
 # Authentication/Authorization
----
-Extra:
-- Documentation & UML Diagrams
-- Best Practices
