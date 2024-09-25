@@ -8,7 +8,7 @@ from models import Base, Cat
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
 
-class CatRequestModel(BaseModel):
+class CatModel(BaseModel):
     id: Optional[int] = None
     name: str
     colour: str
@@ -18,7 +18,7 @@ class CatUpdateModel(BaseModel):
     colour: Optional[str]
 
 
-@app.get("/cats", status_code=status.HTTP_200_OK)
+@app.get("/cats", response_model=list[CatModel], status_code=status.HTTP_200_OK)
 def findAll():
     with Session() as session:
         cats = session.query(Cat).all()
@@ -27,7 +27,7 @@ def findAll():
         else:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
     
-@app.get("/cats/{id}", status_code=status.HTTP_200_OK)
+@app.get("/cats/{id}", response_model=CatModel, status_code=status.HTTP_200_OK)
 def findById(id: int):
     with Session() as session:
         cat = session.query(Cat).filter(Cat.id == id).first()
@@ -37,7 +37,7 @@ def findById(id: int):
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
     
 @app.post("/cats", status_code=status.HTTP_201_CREATED)
-def create(cat: CatRequestModel):
+def create(cat: CatModel):
     with Session() as session:
         newCat = Cat(**cat.model_dump())
         session.add(newCat)
