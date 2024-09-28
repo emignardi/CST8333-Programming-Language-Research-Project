@@ -14,8 +14,8 @@ Month 2:
 - Multithreading, Multiprocessing & asyncio
 - Databases
 - SQLAlchemy (Object Relational Mapping)
-# GUI
 # Testing/Debugging
+# GUI
 # Web Applications
 # Design Patterns/Principles
 # Frameworks & Libraries
