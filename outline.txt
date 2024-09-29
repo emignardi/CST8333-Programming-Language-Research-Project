@@ -1,4 +1,3 @@
-Month 1:
 - Basics
 - Data Types
 - User Input
@@ -9,19 +8,18 @@ Month 1:
 - Classes/OOP
 - Files/Directories
 - Exception Handling
-
-Month 2:
-- Multithreading, Multiprocessing & asyncio
+- Multithreading, Multiprocessing & AsyncIO
 - Databases
 - SQLAlchemy (Object Relational Mapping)
-# Testing/Debugging
+- Testing/Debugging
 # GUI
-# Web Applications
-# Design Patterns/Principles
-# Frameworks & Libraries
+- Web Applications
+# Design Patterns & Principles
 
-Month 3:
-# Enterprise Application Architecture & Principles
-# Microservices (Load Balancing, Service Discovery, Async/Sync Communication, REST, Event-Driven Design, Pub-Sub Model, Data Model, Observability & More)
-# Containerization/Virtualization
-# Authentication/Authorization
+
+Future Topics (Advanced):
+- Frameworks/Libraries
+- Enterprise Application Architecture & Principles
+- Microservices
+- Containerization/Virtualization
+- Authentication & Authorization
