@@ -14,7 +14,7 @@
 - Testing/Debugging
 # GUI
 - Web Applications
-# Design Patterns & Principles
+- Design Patterns & Principles
 
 
 Future Topics (Advanced):
