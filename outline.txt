@@ -1,3 +1,4 @@
+Month One (Beginner-Intermediate)
 - Basics
 - Data Types
 - User Input
@@ -12,14 +13,13 @@
 - Databases
 - SQLAlchemy (Object Relational Mapping)
 - Testing/Debugging
-# GUI
+- GUI
 - Web Applications
 - Design Patterns & Principles
 
-
 Future Topics (Advanced):
-- Frameworks/Libraries
+- Frameworks & Libraries
 - Enterprise Application Architecture & Principles
 - Microservices
-- Containerization/Virtualization
+- Containerization & Virtualization
 - Authentication & Authorization
