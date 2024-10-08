@@ -19,8 +19,8 @@ def main():
             guitar_list.append(item)
         current_page += 1
     df = pd.DataFrame(guitar_list)
-    df.to_excel("guitars.xlsx")
-    df.to_csv("guitars.csv")
+    df.to_excel("month-one/projects/KijijiScraper/guitars.xlsx", index=False)
+    df.to_csv("month-one/projects/KijijiScraper/guitars.csv", index=False)
 
 if __name__ == "__main__":
     main()
