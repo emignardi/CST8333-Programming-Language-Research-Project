@@ -15,3 +15,11 @@
 - GUI
 - Web Applications
 - Design Patterns & Principles
+
+- Deployment, CI-CD, Pipelines
+- Enterprise Application Architecture & Principles
+- Microservices
+- Application Security
+- Observability
+- Authentication & Authorization
+- Containerization & Virtualization
